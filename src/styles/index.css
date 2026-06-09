@@ -1,0 +1,204 @@
+:root {
+  font-family: Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: #111827;
+  background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.workflow-editor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.workflow-header {
+  height: 58px;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.workflow-name-input {
+  max-width: 280px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.workflow-main {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 220px 1fr 320px;
+}
+
+.node-panel {
+  border-right: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 10px;
+}
+
+.node-panel-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.node-panel-list {
+  display: grid;
+  gap: 8px;
+}
+
+.node-panel-item {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f8fafc;
+  text-align: left;
+  padding: 8px 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.node-panel-item:hover {
+  border-color: #6366f1;
+}
+
+.node-panel.floating {
+  position: fixed;
+  z-index: 50;
+  width: 220px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.workflow-canvas {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+.editor-flow {
+  width: 100%;
+  height: 100%;
+}
+
+.base-node {
+  width: 210px;
+  border: 2px solid;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.base-node.selected {
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.4);
+}
+
+.node-header {
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.node-content {
+  padding: 8px 10px;
+  color: #475569;
+}
+
+.handle-label {
+  position: absolute;
+  right: 14px;
+  font-size: 10px;
+  color: #334155;
+  pointer-events: none;
+}
+
+.handle-true {
+  top: 30%;
+}
+
+.handle-false {
+  top: 58%;
+}
+
+.config-panel {
+  border-left: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 14px;
+  overflow: auto;
+}
+
+.config-panel-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.config-panel-empty {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.context-menu {
+  position: fixed;
+  z-index: 100;
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+  min-width: 140px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.context-menu li {
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.context-menu li:hover {
+  background: #f3f4f6;
+}
+
+.edge-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.edge-actions .el-button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: 14px;
+}
+
+.hidden-input {
+  display: none;
+}
