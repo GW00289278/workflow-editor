@@ -25,9 +25,9 @@ export function createEdge(connection) {
     id: createId('edge'),
     type: 'custom',
     source: connection.source,
-    sourceHandle: connection.sourceHandle || null,
+    sourceHandle: connection.sourceHandle ?? null,
     target: connection.target,
-    targetHandle: connection.targetHandle || null,
+    targetHandle: connection.targetHandle ?? null,
     animated: false,
   }
 }
